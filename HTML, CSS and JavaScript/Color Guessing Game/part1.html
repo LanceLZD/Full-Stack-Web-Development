@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Color Guessing Game</title>
+</head>
+
+<body onload="do_game()">
+	<script type="text/javascript">
+		var colorList = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+		var finished = false;
+		var guessedColor;
+		var rightColor;
+		var countNum = 0;
+		function do_game() {
+			var randomColor = Math.floor(Math.random()*colorList.length);
+			rightColor = randomColor;
+			alert("Cheatsheet: correct answer is "+colorList[rightColor]+".");
+			while (!finished) {
+				countNum += 1;
+				guessedColor = prompt("I am thinking of one of these colors:\n\n"+colorList+"\n\nWhat color am I thinking of?");
+				guessIndex = colorList.indexOf(guessedColor);
+				if (guessIndex==-1) {
+				}
+				else if (guessIndex<rightColor) {
+				}
+				else if (guessIndex>rightColor) {
+				}
+				else {
+					myBody = document.getElementsByTagName("body")[0];
+					myBody.style.background = colorList[rightColor];
+					finished = true;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

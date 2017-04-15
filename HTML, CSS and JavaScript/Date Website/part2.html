@@ -1,0 +1,128 @@
+<head>
+	<title>Dating Website</title>
+	<style type="text/css">
+		fieldset {
+			background: lightyellow;
+			border: 10px solid yellow;
+			margin-bottom: 10px;
+			width: 720px;
+		}
+		.chOrRaLabel {
+			width: auto;
+		}
+		label {
+			width: 180px;
+			display: inline-block;
+			text-align: right;
+			vertical-align: top;
+		}
+		textarea {
+			width: 360px;
+			height: 50px;
+		}
+		.rangeWord {
+			text-align: center;
+			width: 80px;
+		}
+		.rangeWordLeft {
+			background: red;
+		}
+		.rangeWordRight {
+			background: purple;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+	<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+		<fieldset>
+			<legend>Your Face</legend>
+			<div>
+				<label for="faceImage">Your image:</label>
+				<input type="file" name="faceImage" id="faceImage" required="required">
+			</div>
+			<div>
+				<label for="preview">Image preview:</label>
+				<img id="preview" name="preview">
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Your General Details</legend>
+			<div>
+				<label for="userName">Name:</label>
+				<input type="text" name="userName" id="userName" required="required">
+			</div>
+			<div>
+				<label>Gender:</label>
+				<input type="radio" name="userGender" id="userGenderMale" value="Male" required="required">Male
+				<input type="radio" name="userGender" id="userGenderFemale" value="Female" required="required">Female
+			</div>
+			<div>
+				<label for="userAge">Age:</label>
+				<input type="number" name="userAge" id="userAge" required="required">
+			</div>
+			<div>
+				<label for="userDateOfBirth">Date of birth:</label>
+				<input type="Date" name="userDateOfBirth" id="userDateOfBirth">
+			</div>
+			<div>
+				<label for="userFavoriteColor">Favorite color:</label>
+				<input type="color" name="userFavoriteColor" id="userFavoriteColor">
+			</div>
+			<div>
+				<label for="userCountry">Which country:</label>
+				<select name="userCountry">
+					<option>No option</option>
+					<option>USA</option>
+					<option>UK</option>
+					<option>French</option>
+					<option>China</option>
+					<option>Spain</option>
+				</select>
+			</div>			
+		</fieldset>
+
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<div>
+				<label for="userHeight">Height:</label>
+				<label class="rangeWord rangeWordLeft" for="userHeight">Short</label>
+				<input type="range" name="userHeight" id="userHeight" min="0" max="100">
+				<label class="rangeWord rangeWordRight" for="userHeight">Tall</label>
+			</div>
+			<div>
+				<label for="userSalary">Salary:</label>
+				<label class="rangeWord rangeWordLeft" for="userSalary">Poor</label>
+				<input type="range" name="userSalary" id="userSalary" min="0" max="100">
+				<label class="rangeWord rangeWordRight" for="userSalary">Rich</label>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Your Contact Information</legend>
+			<div>
+				<label for="userEmail">Email:</label>
+				<input type="email" name="userEmail" id="userEmail" required="required">
+			</div>
+			<div>
+				<label for="userTelephone">Mobile:</label>
+				<input type="tel" name="userTelephone" id="userTelephone">
+			</div>
+			<div>
+				<label for="userAddress">Address:</label>
+				<textarea name="userAddress" id="userAddress"></textarea>
+			</div>
+			<div>
+				<label class="chOrRaLabel">Method to contact you:</label>
+				<input type="checkbox" name="useEmail" id="useEmail">
+				<label class="chOrRaLabel" for="useEmail">Email</label>
+				<input type="checkbox" name="useWhatsapp" id="useWhatsapp">
+				<label class="chOrRaLabel" for="useWhatsapp">Whatsapp</label>
+				<input type="checkbox" name="useInAppChat" id="useInAppChat">
+				<label class="chOrRaLabel" for="useInAppChat">In-app chat</label>
+			</div>
+		</fieldset>
+		<input type="submit" name="formSubmit" id="formSubmit" value="Submit">
+	</form>
+</body>
